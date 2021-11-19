@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #050505;
+}
+.cube{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d ;
+    transform: rotateX(-30deg);
+    animation: animate 4s linear infinite;
+}
+.container{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+    grid-gap:50px;
+}
+
+@keyframes animate {
+    
+
+        0%
+        {
+            transform: rotateX(-30deg) rotateY(0deg);
+        }
+        100%
+        {
+            transform:  rotateX(-30deg) rotateY(360deg);
+        }
+    
+}
+.cube div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+.cube div span{
+    position: absolute;
+    float: left;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#151515, #0004ec);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+
+}
+.top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: rgb(34, 34, 34);
+    transform: rotateX(90deg) translateZ(150px);
+}
+.top::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: rgb(4, 0, 255);
+    transform: translateZ(-380px);
+    filter: blur(20px);
+    box-shadow: 0 0 120px rgba(17, 0, 255, 0.2),
+    0 0 200px rgba(17, 0, 255, 0.4),
+    0 0 300px rgba(38, 0, 255, 0.6),
+    0 0 400px rgba(17, 0, 255, 0.8),
+    0 0 500px rgb(25, 0, 255);
+}
+
+.cube-red   div span{
+    position: absolute;
+    float: left;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#151515, #ec0000);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+ }
+ .top-red::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: rgb(255, 8, 0);
+    transform: translateZ(-380px);
+    filter: blur(20px);
+    box-shadow: 0 0 120px rgba(255, 0, 0, 0.2),
+    0 0 200px rgba(255, 0, 0, 0.4),
+    0 0 300px rgba(255, 0, 0, 0.6),
+    0 0 400px rgba(255, 0, 0, 0.8),
+    0 0 500px rgb(255, 0, 0);
+}
+
+ .cube-green div span{
+    position: absolute;
+    float: left;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#151515, #00ec14);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+ }
+ .top-green::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: rgb(30, 255, 0);
+    transform: translateZ(-380px);
+    filter: blur(20px);
+    box-shadow: 0 0 120px rgba(38, 255, 0, 0.2),
+    0 0 200px rgba(72, 255, 0, 0.4),
+    0 0 300px rgba(51, 255, 0, 0.6),
+    0 0 400px rgba(51, 255, 0, 0.8),
+    0 0 500px rgb(60, 255, 0);
+}
+
+.cube-ava div span{
+    position: absolute;
+    float: left;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#151515, #ecc800);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+}
+.top-ava::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: rgb(255, 196, 0);
+    transform: translateZ(-380px);
+    filter: blur(20px);
+    box-shadow: 0 0 120px rgba(255, 179, 0, 0.2),
+    0 0 200px rgba(255, 187, 0, 0.4),
+    0 0 300px rgba(255, 179, 0, 0.6),
+    0 0 400px rgba(255, 179, 0, 0.8),
+    0 0 500px rgb(255, 187, 0);
+}
